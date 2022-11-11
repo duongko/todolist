@@ -4,14 +4,28 @@ table {
   border: 2px solid white;
 }
 
-input.form-control {
+.form-control {
   height: 36px;
-  width: 458px;
+  width: 308px;
+  border: 1px solid bisque;
+
+  margin-bottom: 38px;
+  border-radius: 5px;
 }
 
-button#button-addon2 {
-  height: 44px;
+span.size-list {
+  font-size: 20px;
+  padding: 4px;
 }
+
+button.btn.btn-warning {
+  height: 41px;
+  width: 68px;
+  background-color: #ffcc00;
+  border-radius: 5px;
+}
+
+
 
 .bang {
   width: 60%;
@@ -25,6 +39,60 @@ hr {
 .App {
   text-align: center;
 
+}
+
+.item-list {
+  position: relative;
+  margin-left: 57px;
+  border: 3px solid #f5deb3a6;
+  width: 385px;
+  border-radius: 7px;
+  margin-top: 10px;
+  height: 30px;
+}
+
+input.eidit-update {
+  padding: -2px 46px;
+  margin-bottom: 0px;
+  position: absolute;
+  height: 24px;
+  width: 261px;
+}
+
+
+button.xoa {
+  position: absolute;
+  right: 10px;
+  top: 2px;
+  b: 49px;
+  width: 49px;
+  border-radius: 5px;
+  height: 25px;
+  background: #6c6cd3;
+  color: #fff;
+}
+
+button.edit {
+  position: absolute;
+  right: 63px;
+  top: 2px;
+
+  width: 49px;
+  border-radius: 5px;
+  height: 25px;
+  background: #0a6b32;
+  color: #fff;
+}
+
+
+
+
+
+.container {
+  width: 500px;
+  height: 500px;
+  border-radius: 1px;
+  border: 1px solid bisque;
 }
 
 .App-logo {

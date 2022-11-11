@@ -1,5 +1,5 @@
 import { useState } from "react"
-
+import button from 'react-bootstrap/button';
 
 const ListToDo = (props) => {
     const { listodo, handledelete, setedittodo, edittodo, setlistodo } = props
@@ -53,15 +53,15 @@ const ListToDo = (props) => {
 
                 return (
 
-                    <div key={value.id} style={{ display: "flex" }}>
+                    <div key={value.id} style={{ display: "flex" }} className="item-list">
 
 
                         {isempty ?
-                            <div>
+                            <div >
 
-                                <span>{index + 1}-{value.todo} </span>
+                                <span className="size-list">{index + 1}-{value.todo} </span>
 
-                                <span><button onClick={() => handleupdate(value)}> Edit</button></span>
+                                <span><button onClick={() => handleupdate(value)} className="edit"> Edit</button></span>
                             </div>
 
                             :
@@ -70,16 +70,16 @@ const ListToDo = (props) => {
                                 {value.id === edittodo.id ?
 
 
-                                    <div>
-                                        <span><input type="text" value={edittodo.todo} onChange={(event) => { handleedit(event) }} /> </span>
-                                        <span><button onClick={() => handlesave(value)}> save</button></span>
+                                    <div >
+                                        <span className="edit-update-cha"><input className="eidit-update" type="text" value={edittodo.todo} onChange={(event) => { handleedit(event) }} /> </span>
+                                        <span><button onClick={() => handlesave(value)} className="edit"> save</button></span>
                                     </div>
                                     :
-                                    <>
+                                    <div >
                                         <span>{index + 1}-{value.todo} </span>
-                                        <span><button onClick={() => handleupdate(value)}> Edit</button></span>
+                                        <span><button variant="warning" onClick={() => handleupdate(value)} className="edit"> Edit</button></span>
 
-                                    </>
+                                    </div>
 
                                 }
                             </div>
@@ -91,7 +91,7 @@ const ListToDo = (props) => {
 
 
 
-                        <span><button onClick={() => handledelete(value.id)}> xoá</button></span>
+                        <span><button onClick={() => handledelete(value.id)} className="xoa"> xoá</button></span>
 
 
 
@@ -100,7 +100,7 @@ const ListToDo = (props) => {
                 )
             })}
 
-        </div>
+        </div >
     )
 
 

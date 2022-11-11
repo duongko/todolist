@@ -1,4 +1,5 @@
 import React from "react";
+import { Button } from "bootstrap";
 
 const Addtodo = (props) => {
     const { listodo, addtodo, setaddtodo, handleaddtodo } = props
@@ -23,9 +24,10 @@ const Addtodo = (props) => {
                     aria-label="Recipient's username" aria-describedby="button-addon2"
                     value={!addtodo ? '' : addtodo.todo} onChange={(event) => handletodo(event)}
                 />
-                <button className="btn btn-outline-secondary" type="button" id="button-addon2"
+                <button className="btn btn-warning"
                     onClick={() => handleaddtodo()}
-                >Button</button>
+                >ADD</button>
+
             </div>
         </div>
     )

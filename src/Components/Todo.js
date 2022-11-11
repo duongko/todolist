@@ -3,8 +3,12 @@ import React, { useEffect, useState } from "react";
 import Addtodo from "./Addtodo";
 import ListToDo from "./ListToDo";
 
+
 const Todo = () => {
-    const initialState = JSON.parse(localStorage.getItem('listodo')) || [];
+    const initialState = JSON.parse(localStorage.getItem('listodos')) || [];
+
+
+    console.log("khi dc lay ve", initialState)
     const [listodo, setlistodo] = useState(initialState)
     const [addtodo, setaddtodo] = useState('')
 
@@ -17,7 +21,7 @@ const Todo = () => {
 
 
 
-        setlistodo([addtodo, ...listodo])
+        setlistodo([...listodo, addtodo])
         setaddtodo('')
 
 
@@ -37,13 +41,18 @@ const Todo = () => {
 
 
     useEffect(() => {
-        localStorage.setItem("listodo", JSON.stringify(listodo))
+        const post = localStorage.setItem("listodos", JSON.stringify(listodo))
+
+        console.log("useEffect")
     }, [listodo])
 
-
+    console.log("render")
 
     return (
-        <div>
+        <div className="container">
+
+            <h2>Todo-List</h2>
+
             <Addtodo
                 handleaddtodo={handleaddtodo}
                 addtodo={addtodo}

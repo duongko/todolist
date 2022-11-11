@@ -2,6 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Todo from './Components/Todo';
+import { Button } from 'bootstrap';
 
 class App extends React.Component {
   render() {
@@ -10,14 +11,7 @@ class App extends React.Component {
         <header className="App-header">
           <Todo />
 
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+
         </header>
 
 
