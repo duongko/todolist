@@ -6,6 +6,7 @@ import ListToDo from "./ListToDo";
 
 const Todo = () => {
     const initialState = JSON.parse(localStorage.getItem('listodos')) || [];
+    //lấy dữ liệu từ localStorange
 
 
     console.log("khi dc lay ve", initialState)

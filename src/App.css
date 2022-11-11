@@ -19,10 +19,16 @@ span.size-list {
 }
 
 button.btn.btn-warning {
+  cursor: pointer;
   height: 41px;
   width: 68px;
   background-color: #ffcc00;
   border-radius: 5px;
+
+}
+
+.btn.btn-warning:hover {
+  border: #ffcc00;
 }
 
 
@@ -64,12 +70,22 @@ button.xoa {
   position: absolute;
   right: 10px;
   top: 2px;
-  b: 49px;
+
   width: 49px;
   border-radius: 5px;
   height: 25px;
   background: #6c6cd3;
   color: #fff;
+}
+
+button.xoa:hover {
+  cursor: pointer;
+  border: #5c5ce4;
+}
+
+button.edit:hover {
+  cursor: pointer;
+  border: #065226
 }
 
 button.edit {

@@ -6,22 +6,20 @@ const ListToDo = (props) => {
     const [show, setshow] = useState()
     const [valueupdate, setvalueupdate] = useState('')
 
+
     const handleupdate = (value) => {
-
-
-
-
 
         setedittodo(value)
 
-
-
-
     }
     const handleedit = (event) => {
+        console.log("event: k", event)
 
         let edittodos = { ...edittodo }
+
+        /// lấy lại giá trị bạn đầu sẵn của tk edittodo
         edittodos.todo = event.target.value
+
 
         setedittodo(edittodos)
 
@@ -76,8 +74,8 @@ const ListToDo = (props) => {
                                     </div>
                                     :
                                     <div >
-                                        <span>{index + 1}-{value.todo} </span>
-                                        <span><button variant="warning" onClick={() => handleupdate(value)} className="edit"> Edit</button></span>
+                                        <span className="size-list">{index + 1}-{value.todo} </span>
+                                        <span><button onClick={() => handleupdate(value)} className="edit"> Edit</button></span>
 
                                     </div>
 

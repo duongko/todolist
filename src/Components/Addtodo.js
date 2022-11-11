@@ -20,7 +20,7 @@ const Addtodo = (props) => {
     return (
         <div>
             <div className="input-group mb-3">
-                <input type="text" className="form-control"
+                <input type="text" className="form-control" placeholder="Nhập công việc cần làm"
                     aria-label="Recipient's username" aria-describedby="button-addon2"
                     value={!addtodo ? '' : addtodo.todo} onChange={(event) => handletodo(event)}
                 />
